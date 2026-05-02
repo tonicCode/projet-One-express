@@ -12,6 +12,8 @@ this.cardDistribPlayer;
 this.centerCard;
 this.countCenterCards;
 
+this.clickOnPack=document.getElementById("containerPaquet");
+
 
 
  }
@@ -199,7 +201,7 @@ tab1=this.allCartesBlend.splice(0,totalARetirer);
 
 this.centerCard=this.allCartesBlend.splice(0,cartesAuxCentre);
 
-
+// this.toGetUpdateTab(this.allCartesBlend);
 
 
 this.cardDistribPlayer=tab1;
@@ -208,24 +210,52 @@ console.log("new tableau :",tab1);
 
 // }
 
- 
- 
+
  
 }  
   
+// toGetUpdateTab(tableauxPaquet){
+
+
+// this.allCartesBlend=tableauxPaquet
+
+
+// return this.allCartesBlend;
+// }
+
+
+
+  
+  displayNbCardsPack(){
+
+
+    return this.allCartesBlend.length;
+  }
   
   
   
-  
-  
+initEventClick(){
+
+this.clickOnPack.addEventListener("click",() => this.Piocher());
+
+}
+
+
+
+
   
   //afficher carte de la pile , pouvoir l'extraire au click lors du piochage, le retirer de son tableau 1 à 1 et a partir de la fin
   
-  gestionCardsPack(){
+  Piocher = () => {
    
+    let carte;
+   // carte=this.allCartesBlend.splice(0,1);
    
+console.log("la pioche", this.allCartesBlend);
+
+
    
-   
+   //return this.allCartesBlend;
    
    
   }

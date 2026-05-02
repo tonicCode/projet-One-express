@@ -112,6 +112,16 @@ export class Dialogue{
   }
   
   
+
+dialogueCardsPack(nbOfCards){
+
+  let nbCadsPack=document.getElementById("nbCardsPack");
+
+
+nbCadsPack.innerHTML=`il reste : ${nbOfCards}  cartes`;
+
+}
+
   
   
   
