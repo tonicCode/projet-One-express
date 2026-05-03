@@ -33,10 +33,10 @@ this.createCarte1.toCheckDuplicate();
    this.dialogue.dialogueTours(this.players.turnChoices());
   
     
-    //passe tableaux de carte joueur
-    this.players.playerHas(this.createCarte1.cardDistribPlayer);
+    //passe tableaux de carte joueur et de la partie adverse (computer)
+    this.players.playerHas(this.createCarte1.cardDistribPlayer, this.createCarte1.cardForComputer);
     
-    this.dialogue.dialogueCard(this.players.playerGetCards);
+    this.dialogue.dialogueCard(this.players.playerGetCards, this.players.playerComputerGetCards);
    
    
    //initialise le jeux

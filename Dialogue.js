@@ -58,8 +58,9 @@ export class Dialogue{
     
   }
   
-  dialogueCard(playerHas){
+  dialogueCard(playerHas, computerHas){
    
+    console.log("##" , computerHas);
    
     let createShowCards=document.createElement("div");
     //document.body.appendChild(createShowCards);
@@ -72,10 +73,6 @@ export class Dialogue{
     
     
     
-    //showCards.innerHTML="hello"
-    
-    //console.log("%",playerHas);
-    
     playerHas.forEach(element =>{
       
       
@@ -87,26 +84,50 @@ export class Dialogue{
       
       document.body.appendChild(createShowCards);
       
-      //createDiv.setAttribute("id","divCards");
-      
-      
-      
-      //let divCards=document.getElementById("divCards");
-      
-     // createDiv.style.border=1+"px solid black";
-      //createDiv.style.width=20+'px';
-     //createDiv.style.height=100+"px"
      
       createDiv.setAttribute("style","display:flex ; margin:10px; border:1px solid black;height:50px")
       
       
-      
+      // affiche les carte du joueur
       createDiv.innerHTML=element;
      createShowCards.style.border=1+"px solid black";
     
-    
     });
     
+let containerComput=document.getElementById("containerPaquetAdverse");
+
+    computerHas.forEach(element =>{
+      
+      
+      //console.log("ele :" ,element)
+      
+      let createDiv2=document.createElement("div");
+      
+      containerComput.appendChild(createDiv2);
+      
+      //document.body.appendChild(createShowCards);
+      
+     
+      createDiv2.setAttribute("style","display:flex ; margin:10px; border:1px solid black;height:50px")
+      
+      
+      // affiche les carte du joueur
+      createDiv2.innerHTML=element;
+    // createShowCards.style.border=1+"px solid black";
+    
+    });
+
+
+
+
+
+
+
+
+
+
+
+
     
     
   }

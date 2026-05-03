@@ -9,6 +9,7 @@ this.cartePlus2=cartePlus2;
 this.allCartes=[52];
 this.allCartesBlend=[56];
 this.cardDistribPlayer;
+this.cardForComputer;
 this.centerCard;
 this.countCenterCards;
 this.cardsInThePack=[];
@@ -193,6 +194,7 @@ toPrepareDistrib(nbCards){
  
  //console.log("nb : " , nbCards);
 let tab1;
+let tab2;
 
 
 let nbCarteARetirer=5;
@@ -203,14 +205,17 @@ totalARetirer=nbCarteARetirer*nbCards;
  
 
 tab1=this.allCartesBlend.splice(0,totalARetirer);
+tab2=this.allCartesBlend.splice(0,totalARetirer);
+
+
 
 this.centerCard=this.allCartesBlend.splice(0,cartesAuxCentre);
 
-// this.toGetUpdateTab(this.allCartesBlend);
 
 
 this.cardDistribPlayer=tab1;
 console.log("new tableau :",tab1);
+this.cardForComputer=tab2;
 // console.log("tab de depart :", this.allCartesBlend);
 
 // }
