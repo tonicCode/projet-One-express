@@ -11,6 +11,11 @@ this.allCartesBlend=[56];
 this.cardDistribPlayer;
 this.centerCard;
 this.countCenterCards;
+this.cardsInThePack=[];
+
+
+
+
 
 this.clickOnPack=document.getElementById("containerPaquet");
 
@@ -226,11 +231,6 @@ console.log("new tableau :",tab1);
 
 
   
-  displayNbCardsPack(){
-
-
-    return this.allCartesBlend.length;
-  }
   
   
   
@@ -251,15 +251,53 @@ this.clickOnPack.addEventListener("click",() => this.Piocher());
     let carte;
    // carte=this.allCartesBlend.splice(0,1);
    
+
+carte=this.allCartesBlend.pop();
+this.cardsInThePack.push(carte);
+   
 console.log("la pioche", this.allCartesBlend);
+console.log("pack", this.cardsInThePack);
 
 
+   this.toDisplayPioche();
+   
    
    //return this.allCartesBlend;
    
    
   }
   
+  
+ toDisplayPioche(){
+   
+   let cardsPiocheContainer=document.getElementById("pioche");
+   
+   
+   let createElem=document.createElement("div");
+   
+   cardsPiocheContainer.appendChild(createElem);
+   
+   
+   createElem.setAttribute("style","border:1px solid red;height:50px ;display:flex; align-items:center");
+   
+   
+   createElem.innerHTML=this.cardsInThePack[this.cardsInThePack.length-1];
+   
+    this.displayNbCardsPack();
+   
+   
+   
+   
+   
+ }
+  
+displayNbCardsPack(){
+
+//console.log("&&&&&", this.allCartesBlend.length)
+
+
+    return this.allCartesBlend.length;
+  }
   
   
   

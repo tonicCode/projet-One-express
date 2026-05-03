@@ -117,8 +117,11 @@ dialogueCardsPack(nbOfCards){
 
   let nbCadsPack=document.getElementById("nbCardsPack");
 
+console.log("!!!!",nbOfCards);
 
-nbCadsPack.innerHTML=`il reste : ${nbOfCards}  cartes`;
+
+
+nbCardsPack.innerHTML=`il reste : ${nbOfCards}  cartes`;
 
 }
 

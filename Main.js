@@ -44,9 +44,16 @@ this.createCarte1.toCheckDuplicate();
    this.game.throwInCenter();
  this.createCarte1.initEventClick();
  
-   this.dialogue.dialogueCardsPack(this.createCarte1.displayNbCardsPack());
+ 
+ //ecrit le nb de cartes
+ 
+this.createCarte1.clickOnPack.addEventListener("click",() => {
+  
+  
+  
+ this.dialogue.dialogueCardsPack(this.createCarte1.displayNbCardsPack());
    
-    
+}); 
     
   }
 
