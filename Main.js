@@ -40,7 +40,7 @@ this.createCarte1.toCheckDuplicate();
    
    
    //initialise le jeux
-   this.game=new Game(this.createCarte1.centerCard);
+   this.game=new Game(this.createCarte1.centerCard,this.players.playerGetCards);
    this.game.throwInCenter();
  this.createCarte1.initEventClick();
  

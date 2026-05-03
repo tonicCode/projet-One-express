@@ -20,7 +20,7 @@ this.cardsInThePack=[];
 
 this.clickOnPack=document.getElementById("containerPaquet");
 
-
+this.clickOnCardPlayers=document.getElementById("showCardPlayers");
 
  }
   
@@ -242,6 +242,9 @@ this.cardForComputer=tab2;
 initEventClick(){
 
 this.clickOnPack.addEventListener("click",() => this.Piocher());
+this.clickOnCardPlayers.addEventListener("mouseover",() => this.giveIsColor());
+
+
 
 }
 
@@ -256,16 +259,28 @@ this.clickOnPack.addEventListener("click",() => this.Piocher());
     let carte;
    // carte=this.allCartesBlend.splice(0,1);
    
+let pioche=document.getElementById("pioche");
 
+
+
+let a=getComputedStyle(pioche).height;
+let convert=parseInt(a);
+
+console.log("taille :" , convert);
+
+if(convert < 700 ){
 carte=this.allCartesBlend.pop();
 this.cardsInThePack.push(carte);
    
+
+
+
 console.log("la pioche", this.allCartesBlend);
 console.log("pack", this.cardsInThePack);
 
 
    this.toDisplayPioche();
-   
+}
    
    //return this.allCartesBlend;
    
@@ -306,6 +321,20 @@ displayNbCardsPack(){
   
   
   
+
+giveIsColor(){
+
+
+
+this.clickOnCardPlayers.style.backgroundColor="red";
+
+
+
+}
+
+
+
+
   
   
 }

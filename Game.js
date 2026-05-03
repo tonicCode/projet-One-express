@@ -2,9 +2,10 @@
 export class Game{
   
   
-  constructor(cardOnCenter){
+  constructor(cardOnCenter,cardPlayer){
     
     this.cardOnCenter=cardOnCenter;
+    this.cardPlayer=cardPlayer
     
     
     
@@ -12,16 +13,42 @@ export class Game{
   
   
   throwInCenter(){
-    let cardOnCenter=document.getElementById("cardsCenter");
+    let cardCenter=document.getElementById("cardsCenter");
     
     
-    cardOnCenter.innerHTML=this.cardOnCenter;
+    cardCenter.innerHTML=this.cardOnCenter;
     
-    
+    this.corespondance();
     
     return this.cardOnCenter;
   }
   
+
+
+
+corespondance(){
+
+console.log("tabl :: ",this.cardOnCenter);
+
+
+
+
+this.cardPlayer.forEach(element => {
+  
+if(element == this.cardOnCenter){
+
+console.log("l index est : " , element);
+
+}
+
+
+
+});
+
+
+
+}
+
   
   
   

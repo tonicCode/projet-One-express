@@ -4,6 +4,7 @@ export class Dialogue{
    // this.nbrPlayers=0;
  this.PlayersName=[4];
     this.howManyPlayers=0;
+   // this.showCardPlayers=document.getElementById("showCardPlayers");
   }
   
   
@@ -65,32 +66,40 @@ export class Dialogue{
     let createShowCards=document.createElement("div");
     //document.body.appendChild(createShowCards);
     
-    createShowCards.setAttribute("id","showCardPlayer");
+    //createShowCards.setAttribute("id","showCardPlayer");
     createShowCards.setAttribute("style","display:flex ; justify-content: center");
     
     
-    let showCards=document.getElementById("showCardPlayer");
+    let showCards=document.getElementById("showCardPlayers");
     
     
     
     playerHas.forEach(element =>{
+          let createDiv=document.createElement("div");
       
+      showCards.appendChild(createDiv);
       
-      //console.log("ele :" ,element)
-      
-      let createDiv=document.createElement("div");
-      
-      createShowCards.appendChild(createDiv);
-      
-      document.body.appendChild(createShowCards);
+      //document.body.appendChild(createShowCards);
       
      
       createDiv.setAttribute("style","display:flex ; margin:10px; border:1px solid black;height:50px")
       
       
+      // //console.log("ele :" ,element)
+      
+      // let createDiv=document.createElement("div");
+      
+      // createShowCards.appendChild(createDiv);
+      
+      // document.body.appendChild(createShowCards);
+      
+     
+      // createDiv.setAttribute("style","display:flex ; margin:10px; border:1px solid black;height:50px")
+      
+      
       // affiche les carte du joueur
-      createDiv.innerHTML=element;
-     createShowCards.style.border=1+"px solid black";
+      showCards.innerHTML=element;
+     //createShowCards.style.border=1+"px solid black";
     
     });
     
