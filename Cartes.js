@@ -15,7 +15,7 @@ this.countCenterCards;
 this.cardsInThePack=[];
 
 
-
+this.createDivForCards;
 
 
 this.clickOnPack=document.getElementById("containerPaquet");
@@ -325,15 +325,7 @@ displayNbCardsPack(){
   
   
 
-giveIsColor(){
 
-
-
-this.clickOnCardPlayers.style.backgroundColor="red";
-
-
-
-}
 
 
 toCreateDisplayCards(cartePl){
@@ -344,30 +336,64 @@ toCreateDisplayCards(cartePl){
   
   cartePl.forEach(element =>{
   
-let createDivForCards=document.createElement("div");
+this.createDivForCards=document.createElement("div");
   
-  this.clickOnCardPlayers.appendChild(createDivForCards);
-  
-  
-  createDivForCards.setAttribute("style","display:flex ; margin:10px; border:1px solid black;height:50px");
-  
-  console.log("€#@!",element);
+  this.clickOnCardPlayers.appendChild(this.createDivForCards);
   
   
-   createDivForCards.innerHTML=element;
+  this.createDivForCards.setAttribute("style","display:flex ; margin:10px; border:1px solid black;height:50px");
+  
+  
+  
+   this.createDivForCards.innerHTML=element;
     
   });
   
   
-  
-  
+
   
   
   
   
   
 }
+  
+  giveIsColor(){
 
+
+
+Array.from(this.clickOnCardPlayers.children).forEach(child =>{
+
+let mot=child.textContent;
+
+let convert=mot.slice(0,3);
+
+if(convert == "red"){
+
+  child.style.backgroundColor="red";
+}else if( convert == "blu"){
+
+  child.style.backgroundColor="blue";
+}else if(convert == "gre"){
+  child.style.backgroundColor="green";
+}else if(convert == "yel"){
+  child.style.backgroundColor="yellow";
+}else {
+  child.style.backgroundColor="grey";
+}
+
+
+
+
+
+
+});
+
+
+
+
+
+}
 
   
   
