@@ -22,10 +22,13 @@ this.clickOnPack=document.getElementById("containerPaquet");
 
 this.clickOnCardPlayers=document.getElementById("showCardPlayers");
 
+
  }
   
   
 createCartes(){
+
+
  let count=-1;
   let count2=-1;
 let cardTypeA=[52];
@@ -214,7 +217,7 @@ this.centerCard=this.allCartesBlend.splice(0,cartesAuxCentre);
 
 
 this.cardDistribPlayer=tab1;
-console.log("new tableau :",tab1);
+console.log("new tableau :",this.cardDistribPlayer);
 this.cardForComputer=tab2;
 // console.log("tab de depart :", this.allCartesBlend);
 
@@ -333,6 +336,37 @@ this.clickOnCardPlayers.style.backgroundColor="red";
 }
 
 
+toCreateDisplayCards(cartePl){
+  
+//console.log("test",cartePl);
+  
+  
+  
+  cartePl.forEach(element =>{
+  
+let createDivForCards=document.createElement("div");
+  
+  this.clickOnCardPlayers.appendChild(createDivForCards);
+  
+  
+  createDivForCards.setAttribute("style","display:flex ; margin:10px; border:1px solid black;height:50px");
+  
+  console.log("€#@!",element);
+  
+  
+   createDivForCards.innerHTML=element;
+    
+  });
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}
 
 
   

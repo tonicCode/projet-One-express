@@ -61,28 +61,28 @@ export class Dialogue{
   
   dialogueCard(playerHas, computerHas){
    
-    console.log("##" , computerHas);
+   // console.log("##" , computerHas);
    
-    let createShowCards=document.createElement("div");
+   // let createShowCards=document.createElement("div");
     //document.body.appendChild(createShowCards);
     
     //createShowCards.setAttribute("id","showCardPlayer");
-    createShowCards.setAttribute("style","display:flex ; justify-content: center");
+    //createShowCards.setAttribute("style","display:flex ; justify-content: center");
     
     
-    let showCards=document.getElementById("showCardPlayers");
+    //let showCards=document.getElementById("showCardPlayers");
     
     
     
     playerHas.forEach(element =>{
           let createDiv=document.createElement("div");
       
-      showCards.appendChild(createDiv);
+      //showCards.appendChild(createDiv);
       
-      //document.body.appendChild(createShowCards);
+     // document.body.appendChild(createShowCards);
       
      
-      createDiv.setAttribute("style","display:flex ; margin:10px; border:1px solid black;height:50px")
+     // createDiv.setAttribute("style","display:flex ; margin:10px; border:1px solid black;height:50px")*/
       
       
       // //console.log("ele :" ,element)
@@ -98,7 +98,7 @@ export class Dialogue{
       
       
       // affiche les carte du joueur
-      showCards.innerHTML=element;
+     // showCards.innerHTML=element;
      //createShowCards.style.border=1+"px solid black";
     
     });

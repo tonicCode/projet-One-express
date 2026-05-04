@@ -71,6 +71,14 @@ border:1px solid black;
 
 }
 
+#showCardPlayers{
+  display: flex;
+  border: 1px solid black;
+  
+  
+  
+}
+
 
 
 

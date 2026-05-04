@@ -54,6 +54,11 @@ this.createCarte1.clickOnPack.addEventListener("click",() => {
  this.dialogue.dialogueCardsPack(this.createCarte1.displayNbCardsPack());
    
 }); 
+
+
+
+this.createCarte1.toCreateDisplayCards(this.players.playerGetCards);
+
     
   }
 
