@@ -77,30 +77,11 @@ export class Dialogue{
     playerHas.forEach(element =>{
           let createDiv=document.createElement("div");
       
-      //showCards.appendChild(createDiv);
-      
-     // document.body.appendChild(createShowCards);
-      
-     
-     // createDiv.setAttribute("style","display:flex ; margin:10px; border:1px solid black;height:50px")*/
-      
-      
-      // //console.log("ele :" ,element)
-      
-      // let createDiv=document.createElement("div");
-      
-      // createShowCards.appendChild(createDiv);
-      
-      // document.body.appendChild(createShowCards);
-      
-     
-      // createDiv.setAttribute("style","display:flex ; margin:10px; border:1px solid black;height:50px")
-      
-      
-      // affiche les carte du joueur
-     // showCards.innerHTML=element;
-     //createShowCards.style.border=1+"px solid black";
-    
+
+
+
+
+
     });
     
 let containerComput=document.getElementById("containerPaquetAdverse");

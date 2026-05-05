@@ -11,8 +11,17 @@ this.allCartesBlend=[56];
 this.cardDistribPlayer;
 this.cardForComputer;
 this.centerCard;
+//this.createDisplayCenterCards;
+   this.createDisplayPiocheCards=document.getElementById("pioche");
+   this.elemPiocheCards;
+
+   this.containerCenterCard=document.getElementById("containerCardsCenter");
+   this.elemCenterCards=document.getElementById("cardsCenter");
+
+
 this.countCenterCards;
 this.cardsInThePack=[];
+this.cardTakeColor;
 
 
 this.createDivForCards;
@@ -293,18 +302,18 @@ console.log("pack", this.cardsInThePack);
   
  toDisplayPioche(){
    
-   let cardsPiocheContainer=document.getElementById("pioche");
+
    
    
-   let createElem=document.createElement("div");
+   this.elemPiocheCards=document.createElement("div");
    
-   cardsPiocheContainer.appendChild(createElem);
-   
-   
-   createElem.setAttribute("style","border:1px solid red;height:50px ;display:flex; align-items:center");
+   this.createDisplayPiocheCards.appendChild(this.elemPiocheCards);
    
    
-   createElem.innerHTML=this.cardsInThePack[this.cardsInThePack.length-1];
+   this.elemPiocheCards.setAttribute("style","border:1px solid red;height:50px ;display:flex; align-items:center");
+   
+   
+   this.elemPiocheCards.innerHTML=this.cardsInThePack[this.cardsInThePack.length-1];
    
     this.displayNbCardsPack();
    
@@ -384,10 +393,47 @@ if(convert == "red"){
 
 
 
+// console.log("change color :",this.cardTakeColor);
+
+//met couleur sur les cartes joueurs 
+
+if(this.cardTakeColor==convert ){
+
+  child.style.backgroundColor="orange";
+}
+
 
 
 
 });
+
+
+
+
+ Array.from(this.containerCenterCard.children).forEach(childr=> {
+
+  let mot=childr.textContent;
+  let convert=mot.slice(0,3);
+
+
+ // console.log("&", elem);
+
+
+
+
+
+
+if(this.cardTakeColor == convert){
+
+  childr.style.backgroundColor="orange";
+}
+
+})
+
+
+
+
+
 
 
 
