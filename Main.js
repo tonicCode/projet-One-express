@@ -64,6 +64,13 @@ this.createCarte1.toCreateDisplayCards(this.players.playerGetCards);
 
 this.createCarte1.allNumFromCardsPlayers=this.game.recordNum;
     
+
+this.createCarte1.toGetNumb();
+this.createCarte1.toGetSymbols();
+
+
+
+
   }
 
 

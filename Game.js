@@ -30,7 +30,7 @@ export class Game{
 
 corespondance(){
 
-console.log("tabl :: ",this.cardOnCenter);
+//console.log("tabl :: ",this.cardOnCenter);
 
 
 
@@ -106,7 +106,7 @@ let y=parseInt(x);
     this.recordNumOfCenter.push(x);
 
 
-console.log("num des carte egale centre:" , this.recordNumOfCenter);
+//console.log("num des carte egale centre:" , this.recordNumOfCenter);
   }
 
 

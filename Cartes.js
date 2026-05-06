@@ -27,6 +27,8 @@ this.cardTakeColor;
 this.createDivForCards;
 this.allNumFromCardsPlayers=[];
 
+this.saveElementCard;
+
 this.clickOnPack=document.getElementById("containerPaquet");
 
 this.clickOnCardPlayers=document.getElementById("showCardPlayers");
@@ -366,6 +368,115 @@ this.createDivForCards=document.createElement("div");
   
   
 }
+
+
+// methode qui remplis un tableau de numero 
+toGetNumb(){
+
+let filt;
+let tab=[];
+ 
+  Array.from(this.clickOnCardPlayers.children).forEach(elem => {
+
+    let word=elem.textContent;
+
+     filt=word.replace(/\D/g,"");
+     tab.push(Number(filt));
+
+
+
+
+  });
+
+
+console.log("*****repl**** :",tab);
+
+}
+
+
+//methode qui rempli un tableau de symboles
+
+toGetSymbols(){
+let filt;
+let isNum;
+let tab=[];
+ 
+  Array.from(this.clickOnCardPlayers.children).forEach(elem => {
+
+    let word=elem.textContent;
+  filt=word.replace(/[^\p{Emoji}]/gu,"");
+isNum=Number(filt);
+  
+
+console.log("filter",Number(filt));
+  if(!Number.isNaN(filt) ){
+
+if(Number.isNaN(isNum) || filt == "🎨"){
+//  console.log("####",filt);
+
+tab.push(filt);
+
+}
+
+   
+
+
+console.log("#### tab :",tab);
+
+  }
+
+  
+  
+    // finder= word.split("");
+
+
+
+
+
+
+
+// finder=word.find(s => s == "🎨");
+
+console.log("w",word);
+
+
+
+switch(filt){
+
+case "🎨" : 
+ tab.push(finder);
+    
+break;
+    case "🚫":
+
+break;
+
+case "🔃" :
+  
+
+    
+
+}
+    //  filt=word.replace(/\D/g,"");
+
+
+
+
+
+  });
+
+
+console.log("@@@symb@@@ :",tab);
+
+
+
+
+}
+
+
+
+
+
   
   giveIsColor(){
 
@@ -391,6 +502,9 @@ if(convert == "red"){
   child.style.backgroundColor="grey";
 }
 
+
+
+this.saveElementCard=child;
 
 
 // console.log("change color :",this.cardTakeColor);
@@ -421,11 +535,17 @@ let num=mot.replace(/\D/g, "");
 //  console.log("&", num);
  
 let res=this.allNumFromCardsPlayers.find(n => n == num);
-console.log("r",res);
+
+//console.log("r",res);
+//console.log("§§",this.saveElementCard);
 if(res !== undefined){
 
   childr.style.backgroundColor="orange";
-//this.cardTakeColor==convert;
+let index=this.allNumFromCardsPlayers.findIndex(n => n == res);
+//console.log("index",index);
+
+
+
 
 }
 
