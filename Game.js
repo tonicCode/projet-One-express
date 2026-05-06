@@ -37,16 +37,16 @@ console.log("tabl :: ",this.cardOnCenter);
 
 this.cardPlayer.forEach(element => {
   
-let initialCenterCard=this.cardOnCenter.slice(0,3);
+let initialCenterCard=this.cardOnCenter[0].slice(0,3);
 
 let initialPlayersCard=element.slice(0,3);
-
 
 
 
 if(initialCenterCard == initialPlayersCard){
 
   this.thereIsCorrespondance=initialCenterCard;
+console.log(this.thereIsCorrespondance+" "+ "player : => " )
 
 }
 
@@ -110,9 +110,9 @@ console.log("num des carte egale centre:" , this.recordNumOfCenter);
   }
 
 
-let prov=this.recordNumOfCenter.splice(0,5);
+// let prov=this.recordNumOfCenter.splice(0,5);
 
-console.log("provi", prov);
+// console.log("provi", prov);
 
 
 

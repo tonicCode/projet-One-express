@@ -25,7 +25,7 @@ this.cardTakeColor;
 
 
 this.createDivForCards;
-
+this.allNumFromCardsPlayers=[];
 
 this.clickOnPack=document.getElementById("containerPaquet");
 
@@ -417,11 +417,17 @@ if(this.cardTakeColor==convert ){
 
 let num=mot.replace(/\D/g, "");
 
- console.log("&", num);
 
+//  console.log("&", num);
+ 
+let res=this.allNumFromCardsPlayers.find(n => n == num);
+console.log("r",res);
+if(res !== undefined){
 
+  childr.style.backgroundColor="orange";
+//this.cardTakeColor==convert;
 
-
+}
 
 
 if(this.cardTakeColor == convert){

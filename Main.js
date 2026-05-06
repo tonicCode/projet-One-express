@@ -62,6 +62,7 @@ this.createCarte1.clickOnPack.addEventListener("click",() => {
 this.createCarte1.toCreateDisplayCards(this.players.playerGetCards);
 
 
+this.createCarte1.allNumFromCardsPlayers=this.game.recordNum;
     
   }
 
