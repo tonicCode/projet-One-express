@@ -2,7 +2,7 @@
 export class Game{
   
   
-  constructor(cardOnCenter,cardPlayer){
+  constructor(cardOnCenter=[],cardPlayer=[]){
     
     this.cardOnCenter=cardOnCenter;
     this.cardPlayer=cardPlayer
@@ -37,7 +37,7 @@ console.log("tabl :: ",this.cardOnCenter);
 
 this.cardPlayer.forEach(element => {
   
-let initialCenterCard=this.cardOnCenter[0].slice(0,3);
+let initialCenterCard=this.cardOnCenter.slice(0,3);
 
 let initialPlayersCard=element.slice(0,3);
 
@@ -78,7 +78,7 @@ this.recordNum.push(a);
 
 });
 
-//console.log("record num", this.recordNum);
+console.log("record num", this.recordNum);
 
 
 
@@ -108,6 +108,12 @@ let y=parseInt(x);
 
 console.log("num des carte egale centre:" , this.recordNumOfCenter);
   }
+
+
+let prov=this.recordNumOfCenter.splice(0,5);
+
+console.log("provi", prov);
+
 
 
 });

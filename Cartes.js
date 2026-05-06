@@ -415,8 +415,9 @@ if(this.cardTakeColor==convert ){
   let mot=childr.textContent;
   let convert=mot.slice(0,3);
 
+let num=mot.replace(/\D/g, "");
 
- // console.log("&", elem);
+ console.log("&", num);
 
 
 
