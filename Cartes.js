@@ -379,18 +379,25 @@ let tab=[];
   Array.from(this.clickOnCardPlayers.children).forEach(elem => {
 
     let word=elem.textContent;
+let test=word.slice(-2);
+
+
+
+console.log("test :",test);
 
      filt=word.replace(/\D/g,"");
      tab.push(Number(filt));
-
-
+if(test == "+2" || test=="+1" ){
+  tab.push(test);
+  
+}
 
 
   });
 
 
 console.log("*****repl**** :",tab);
-
+return tab;
 }
 
 
@@ -441,22 +448,12 @@ console.log("w",word);
 
 
 
-switch(filt){
 
-case "🎨" : 
- tab.push(finder);
-    
-break;
-    case "🚫":
-
-break;
-
-case "🔃" :
   
 
     
 
-}
+
     //  filt=word.replace(/\D/g,"");
 
 
@@ -470,7 +467,7 @@ console.log("@@@symb@@@ :",tab);
 
 
 
-
+return tab;
 }
 
 
